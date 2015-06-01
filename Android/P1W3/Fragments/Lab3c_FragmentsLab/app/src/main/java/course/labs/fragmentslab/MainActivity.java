@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 public class MainActivity extends Activity implements
 		FriendsFragment.SelectionListener {
@@ -77,6 +78,7 @@ public class MainActivity extends Activity implements
 				fragmentTransaction.addToBackStack(null);
 				fragmentTransaction.commit();
 				Log.i(TAG, "After commit(" + position + ")");
+
 
 				// execute transaction now
 				mFragmentManager.executePendingTransactions();
