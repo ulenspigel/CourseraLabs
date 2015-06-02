@@ -65,8 +65,9 @@ public class ToDoManagerActivity extends ListActivity {
 		footerView.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//TODO - Implement OnClick().
+				//TODO - Implement OnClick(). (+)
 				Intent intent = new Intent(ToDoManagerActivity.this, AddToDoActivity.class);
+				startActivityForResult(intent, ADD_TODO_ITEM_REQUEST);
 			}
 		});
 
@@ -83,13 +84,11 @@ public class ToDoManagerActivity extends ListActivity {
 		// if user submitted a new ToDoItem
 		// Create a new ToDoItem from the data Intent
 		// and then add it to the adapter
+		if (resultCode == RESULT_OK) {
+			if (requestCode == ADD_TODO_ITEM_REQUEST) {
 
-
-            
-            
-            
-		
-
+			}
+		}
 	}
 
 	// Do not modify below here

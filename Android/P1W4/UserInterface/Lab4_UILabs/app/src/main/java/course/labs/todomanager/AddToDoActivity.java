@@ -89,32 +89,24 @@ public class AddToDoActivity extends Activity {
 		cancelButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-
-
-
-				// TODO - Indicate result and finish
-
-                
-                
+				// TODO - Indicate result and finish (+)
+				setResult(RESULT_CANCELED);
+				finish();
 			}
 		});
 
-		// TODO - Set up OnClickListener for the Reset Button
+		// TODO - Set up OnClickListener for the Reset Button (+)
 		final Button resetButton = (Button) findViewById(R.id.resetButton);
 		resetButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-
-
-				// TODO - Reset data to default values
-
-
-                
-                
+				// TODO - Reset data to default values (+)
+				mTitleText.setText("");
+				((RadioButton) findViewById(R.id.statusNotDone)).setChecked(true);
+				((RadioButton) findViewById(R.id.medPriority)).setChecked(true);
                 
 				// reset date and time
 				setDefaultDateTime();
-
 			}
 		});
 
